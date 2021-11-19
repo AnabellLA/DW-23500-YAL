@@ -5,62 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uvita Pets</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="https://kit.fontawesome.com/ac127c9379.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="../uvita-pets/Assest/imagenes/logos/nala.png" width="100" height="60" alt="logo_principal"></a>
-        <ul>
-            <li><a href="../uvita-pets/pages/hazlo_tu_mismo.html">Hazlo tu mismo</a></li>
-            <li><a href="../uvita-pets/pages/bandanas.html">Bandanas</a></li>
-            <li><a href="../uvita-pets/pages/correas.html">Correas</a></li>
-            <li><a href="../uvita-pets/pages/placas_id.html">Placas ID</a></li>
-        </ul>
+    <header class="clase__header">
+        <a href="./index.html"><img class="clase__header__logo" src="../uvita-pets/Assest/imagenes/logos/nala.png" alt="logo_principal"></a>
+        <nav>
+            <ul>
+                <li><a href="../uvita-pets/pages/hazlo_tu_mismo.html">Hazlo tu mismo</a></li>
+                <li><a href="../uvita-pets/pages/bandanas.html">Bandanas</a></li>
+                <li><a href="../uvita-pets/pages/correas.html">Correas</a></li>
+                <li><a href="../uvita-pets/pages/placas_id.html">Placas ID</a></li>
+            </ul>
+        </nav>
     </header>
-    <hr>
-    <img src="./Assest/imagenes/fotos_horizontales/banner.png" width="1250" height="360" alt="banner_home">
+    <div>
+        <img class="clase__index__banner" src="./Assest/imagenes/fotos_horizontales/banner.png" alt="banner_home">
+    </div>
     <main>
-        <h1>Nuestros productos</h1>
-        <form action="">
-            <a href="./pages/bandanas.html"><img src="./Assest/imagenes/fotos_verticales/image00087.jpeg" width="220" height="360" alt="seccion_bandana"></a>
-            <br>
-            <a href="./pages/bandanas.html">BANDANAS</a>
-        </form>
-        <form action="">
-            <a href="./pages/correas.html"><img src="./Assest/imagenes/fotos_verticales/chola.png" width="220" height="360" alt="seccion_correa"></a>
-            <br>
-            <a href="./pages/correas.html">CORREAS</a>
-        </form>
-        <form action="">
-            <a href="./pages/placas_id.html"><img src="./Assest/imagenes/fotos_verticales/plaquita.png" width="220" height="360" alt="seccion_plaquita"></a>
-            <br>
-            <a href="./pages/placas_id.html">PLACAS ID</a>
-        </form>
-        <h4>Para diseños 100% personalizados haz clic aquí:</h4>
-        <a href="./pages/hazlo_tu_mismo.html">
-            <input type="button" name="hazlo_tu_mismo" value="Hazlo tu mismo">
-        </a>
+        <div class="clase__index__main__text">
+            <h1>Nuestros productos</h1>
+        </div>
+        <div class="clase__index__main">
+            <div class="clase__index__main__caja">
+                <a href="./pages/bandanas.html"><img src="./Assest/imagenes/fotos_verticales/image00087.jpeg" alt="seccion_bandana"></a>
+                <a href="./pages/bandanas.html">BANDANAS</a>
+            </div>
+            <div class="clase__index__main__caja">
+                <a href="./pages/correas.html"><img src="./Assest/imagenes/fotos_verticales/chola.png" alt="seccion_correa"></a>
+                <a href="./pages/correas.html">CORREAS</a>
+            </div>
+            <div class="clase__index__main__caja">
+                <a href="./pages/placas_id.html"><img src="./Assest/imagenes/fotos_verticales/plaquita.png" alt="seccion_plaquita"></a>
+                <a href="./pages/placas_id.html">PLACAS ID</a>
+            </div>
+            <div class="clase__index__main__htm">
+                    <h4>Para diseños 100% personalizados haz clic aquí:</h4>
+                    <a href="./pages/hazlo_tu_mismo.html">Hazlo tu mismo</mismo></a>
+            </div>
+        </div>
     </main>
-    <hr>
     <footer>
-        <h3>Contactanos</h3>
-        <ul>
-            <li>
-                <img src="./Assest/imagenes/logos/instagram.png" width="30" height="30" alt="instagram">
-                <a href="https://www.instagram.com/uvita.pet/" target="blank">@uvita.pet</a>
-            </li>
-            <li>
-                <img src="./Assest/imagenes/logos/facebook.png" width="30" height="30" alt="facebook">
-                <a href="https://www.facebook.com/search/top?q=uvita.pet" target="blank">@uvita.pet</a>
-            </li>
-            <li>
-                <img src="./Assest/imagenes/logos/gmail.png" width="30" height="30" alt="gmail">
-                <a href="mailto:nala.uvita@gmail.com" target="blank">nala.uvita@gmail.com</a>
-            </li>
-            <li>
-                <img src="./Assest/imagenes/logos/whatsapp.png" width="30" height="30" alt="whatsapp">
-                <a href="https://api.whatsapp.com/send?phone=51989521560&text=Hola, Nececito mas informacion!" target="blank">+51 989 521 560</a>
-            </li>
-        </ul>
+        <div class="clase__footer">
+            <div class="clase__footer__caja">
+                <img class="clase__footer__caja__logo" src="../uvita-pets/Assest/imagenes/logos/nala.png" alt="logo_principal">
+                <div class="clase__footer__caja__texto">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            <div class="clase__footer__caja">
+                <h3>Contáctanos</h3>
+                <a href="https://www.instagram.com/uvita.pet/" target="blank"><i class="fab fa-instagram-square"></i>@uvita.pet</a>
+                <a href="https://www.facebook.com/search/top?q=uvita.pet" target="blank"><i class="fab fa-facebook-square"></i>@uvita.pet</a>
+                <a href="mailto:nala.uvita@gmail.com" target="blank"><i class="fas fa-envelope-square"></i>nala.uvita@gmail.com</a>
+                <a href="https://api.whatsapp.com/send?phone=51989521560&text=Hola, Nececito mas informacion!" target="blank"><i class="fab fa-whatsapp-square"></i>+51 989 521 560</a>
+            </div>
+        </div>
+        <div class="clase__footer__caja__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 
+            <b>MagtimusPro</b></p>
+        </div>
     </footer>
 </body>
 </html>
