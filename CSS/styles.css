@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 /*Header*/
 .clase__header{
     background:rgba(253, 171, 199, 1);
