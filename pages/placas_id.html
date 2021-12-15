@@ -10,21 +10,36 @@
     <title>Uvita Pets</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <script src="https://kit.fontawesome.com/ac127c9379.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="clase__header">
-        <div class="clase__header__contenedor">
-            <a href="../index.html"><img class="clase__header__logo" src="..//Assest/imagenes/logos/nala.png" alt="logo_principal"></a>
-            <nav class="clase__header__contenedor__nav">
-                <ul>
-                    <li><a href="../pages/hazlo_tu_mismo.html">Hazlo tu mismo</a></li>
-                    <li><a href="../pages/bandanas.html">Bandanas</a></li>
-                    <li><a href="../pages/correas.html">Correas</a></li>
-                    <li><a href="../pages/placas_id.html">Placas ID</a></li>
+    <nav class="navbar navbar-expand-lg navbar-toggleable-sm sticky-top" style="background-color: rgba(253, 171, 199, 1);font-family:'M PLUS Rounded 1c', sans-serif;font-size: 18px;font-weight: 400;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img class="clase__header__logo" src="../Assest/imagenes/logos//logo uvita.svg" width="auto" height="65" alt="logo_principal"></a>
+            <button
+                class="navbar-toggler navbar-toggler-right"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarExample01"
+                aria-controls="navbarExample01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <i class="fas fa-bars" style="color:white;"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end text-center" id="navbarExample01">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" aria-current="page"  href="../pages/hazlo_tu_mismo.html">Hazlo tu mismo</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../pages/bandanas.html">Bandanas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../pages/correas.html">Correas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../pages/placas_id.html">Placas ID</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
     <main>
         <div class="clase__main__producto__pretitulo">
             <h4>Plaquitas con diferentes modelos para tu engreíd@.</h4>
@@ -150,33 +165,37 @@
             <input class="clase__main__producto__paginas__boton" type="button" value="⮞">
         </form>
     </main>
-    <footer>
-        <div class="clase__footer">
-            <div class="clase__footer__caja">
-                <img class="clase__footer__caja__logo" src="../Assest/imagenes/logos/nala.png" alt="logo_principal">
-                <div class="clase__footer__caja__texto">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <footer class="page-footer pt-4" style="background:rgba(253, 171, 199, 1);font-family:'M PLUS Rounded 1c', sans-serif;">
+        <div class="container-fluid text-center text-md-left" style="width: 97%;">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <img src="../Assest/imagenes/logos/logo uvita.svg" alt="logo_principal" width="auto" height="80" style="padding-bottom: 12px;">
+                    <p class="text-white" style="padding-left: 10px;padding-right: 20px;">Somos Uvita.pets un emprendimiento que busca darle los accesorios
+                    de más alta calidad a nuestros engreídos porque entendemos que son nuestros mejores amigos
+                    y compañeros y, por tanto, merecen lo mejor de lo mejor.
+                    </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h3 class="text-uppercase" style="color: white;font-size: 25px;font-weight: 700; padding-top: 12px; padding-bottom: 12px;">Nosotros</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="../pages/nosotros.html">Nosotros</a></li>
+                        <li><a class="text-white" href="../pages/pataton.html">Patatón</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h3 class="text-uppercase" style="color: white;font-size: 25px;font-weight: 700; padding-top: 12px; padding-bottom: 12px;">Contáctanos</h3>
+                    <ul class="list-unstyled" style="font-weight: 400;">
+                        <li><a class="text-white" href="https://www.instagram.com/uvita.pet/" target="blank"><i class="fab fa-instagram-square" style="padding-right: 12px;"></i>@uvita.pet</a></li>
+                        <li><a class="text-white" href="https://www.facebook.com/uvita.pet" target="blank"><i class="fab fa-facebook-square" style="padding-right: 12px;"></i>@uvita.pet</a></li>
+                        <li><a class="text-white" href="mailto:nala.uvita@gmail.com" target="blank"><i class="fas fa-envelope-square" style="padding-right: 12px;"></i>nala.uvita@gmail.com</a></li>
+                        <li><a class="text-white" href="https://api.whatsapp.com/send?phone=51989521560&text=Hola, Nececito mas informacion!" target="blank"><i class="fab fa-whatsapp-square" style="padding-right: 12px;"></i>+51 989 521 560</a></li>    
+                    </ul>
                 </div>
             </div>
-            <div class="clase__footer__caja">
-                <h3>Nosotros</h3>
-                <a href="../pages/nosotros.html">Nosotros</a>
-                <a href="../pages/pataton.html">Patatón</a>
-            </div>
-            <div class="clase__footer__caja">
-                <h3>Contáctanos</h3>
-                <a href="https://www.instagram.com/uvita.pet/" target="blank"><i class="fab fa-instagram-square"></i>@uvita.pet</a>
-                <a href="https://www.facebook.com/uvita.pet" target="blank"><i class="fab fa-facebook-square"></i>@uvita.pet</a>
-                <a href="mailto:nala.uvita@gmail.com" target="blank"><i class="fas fa-envelope-square"></i>nala.uvita@gmail.com</a>
-                <a href="https://api.whatsapp.com/send?phone=51989521560&text=Hola, Nececito mas informacion!" target="blank"><i class="fab fa-whatsapp-square"></i>+51 989 521 560</a>
-            </div>
         </div>
-        <div class="clase__footer__caja__copyright">
-            <hr>
-            <p>Todos los derechos reservados © 2021 
-            <b>MagtimusPro</b></p>
+        <div class="footer-copyright text-center py-3" style="background:rgb(238, 108, 151);color: white;">© 2021 Copyright:
+            <a class="text-white" style="font-weight:500;"href="https://mdbootstrap.com/"> MDBootstrap.com</a>
         </div>
     </footer>
 </body>
