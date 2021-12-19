@@ -14,11 +14,63 @@ body{
     font-size: 28px;
     padding: 2rem;
     }
+    .clase__main__index__caja__a{
+        color:white;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-decoration: none;
+        text-align:center;
+        background: rgba(216, 35, 97, 0.64);
+    }
+    .clase__main__index__htm p{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 23px;
+        text-align:center;
+        font-weight: 500;
+    }
+    .clase__main__index__htm a{
+        text-decoration: none;
+        background-color: rgba(236, 127, 57, 1);
+        color:white;
+        border-radius: 50px;
+        font-weight: bold;
+        padding: 5px 40px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
 }
 @media (max-width:499px) {
     .text-uppercase{
     font-size: 15px;
-    padding: 0.5rem;
+    padding: 1rem 0 1rem 0.5rem;
+    }
+    .clase__main__index__caja__a{
+        color:white;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-decoration: none;
+        text-align:center;
+        background: rgba(216, 35, 97, 0.64);
+    }
+    .clase__main__index__htm p{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 18px;
+        text-align:center;
+        font-weight: 500;
+    }
+    .clase__main__index__htm a{
+        text-decoration: none;
+        background-color: rgba(236, 127, 57, 1);
+        color:white;
+        border-radius: 50px;
+        font-weight: bold;
+        padding: 5px 40px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        text-align: center;
     }
 }
 .clase__main__index__text{
@@ -59,15 +111,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-.clase__main__index__caja__a{
-    color:white;
-    font-weight: 500;
-    font-size: 18px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-decoration: none;
-    text-align:center;
-    background: rgba(216, 35, 97, 0.64);
-}
 .clase__main__index__caja__img{
     width: 100%;
     height: 100%;
@@ -89,27 +132,16 @@ body{
     max-width: 100%;
     margin: auto;
     text-align: center;
-    height: 170px;
+    height: 150px;
 }
-.clase__main__index__htm p{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 23px;
-    text-align:center;
-    font-weight: 500;
-}
-.clase__main__index__htm a{
+.clase__main__index__caja__a:hover{
     text-decoration: none;
-    background-color: rgba(236, 127, 57, 1);
-    color:white;
-    border-radius: 50px;
-    font-weight: bold;
-    padding: 5px 40px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 25px;
-    text-align: center;
+    color: white;
 }
 .clase__main__index__htm a:hover{
     opacity: 0.75;
+    text-decoration: none;
+    color: white;
 }
 /*main__nosotros*/
 .clase__main__nosotros__img{
@@ -121,12 +153,25 @@ body{
     width: auto;
     margin-top: 40px;
 }
-.clase__main__nosotros h1{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-    width: auto;
+@media (min-width:500px){
+    .clase__main__nosotros h1{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        width: auto;
+        padding: 1rem 0;
+    }
+}
+@media (max-width:499px) {
+    .clase__main__nosotros h1{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        width: auto;
+        padding-top: 1rem;
+    }
 }
 .clase__main__nosotros p{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -163,30 +208,70 @@ body{
     padding: 0 0 40px 0;
 }
 /*main_pataton*/
+@media (min-width:500px){
+    .clase__main__pataton h2{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 45px;
+        font-weight: 800;
+        text-align: center;
+        padding-top: 1.8rem;
+    }
+    .clase__main__pataton h3{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }    
+    .clase__main__pataton p{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 4.5rem;
+    }
+    .clase__main__pataton a{
+        font-weight: 500;
+        font-size: 25px;
+        color: rgba(236, 127, 57, 1);
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-decoration: none;
+    }
+}
+@media (max-width:499px) {
+    .clase__main__pataton h2{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+    }
+    .clase__main__pataton h3{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .clase__main__pataton p{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 4.5rem;
+    }
+    .clase__main__pataton a{
+        font-weight: 500;
+        font-size: 22px;
+        color: rgba(236, 127, 57, 1);
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-decoration: none;
+    }
+}
 .clase__main__pataton__banner img{
     height: auto;
     width: 100%;
     margin: auto;
-}
-.clase__main__pataton h2{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 45px;
-    font-weight: 800;
-    text-align: center;
-}
-.clase__main__pataton p{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 25px;
-    font-weight: 300;
-    text-align: center;
-    padding: 0 4.5rem;
-}
-.clase__main__pataton a{
-    font-weight: 500;
-    font-size: 25px;
-    color: rgba(236, 127, 57, 1);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-decoration: none;
 }
 .clase__main__pataton a:hover{
     opacity: 0.6;
@@ -215,12 +300,6 @@ body{
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-.clase__main__pataton h3{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
 }
 /*main_bandanas/correas/placas*/
 .clase__main__producto__pretitulo{
@@ -254,6 +333,8 @@ body{
     color:black;
 }
 .clase__main__producto__inicio__titulo a:hover{
+    text-decoration: none;
+    color:black;
     opacity: 0.7;
 }
 .clase__main__producto__inicio__titulo p{
@@ -323,7 +404,7 @@ body{
 }
 .clase__main__producto__paginas{
     margin: auto;
-    width: 160px;
+    width: 221px;
     padding: 2rem;
 }
 .clase__main__producto__paginas__boton{
@@ -337,6 +418,7 @@ body{
     background: grey;
     color: white;
     font-weight: 500;
+    text-decoration: none;
 }
 /*main_interno_producto (ip)*/
 .clase__main__ip__titulo{
@@ -354,6 +436,8 @@ body{
     color:black;
 }
 .clase__main__ip__titulo a:hover{
+    text-decoration: none;
+    color:black;
     opacity: 0.7;
 }
 .clase__main__ip__titulo p{
@@ -494,36 +578,71 @@ body{
     width: auto;
     margin-top: 40px;
 }
-.clase__main__htm h2{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    font-size: 35px;
-    font-weight: 500;
-    padding: 30px 0;
+@media (min-width:500px){
+    .clase__main__htm h2{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        font-size: 35px;
+        font-weight: 500;
+        padding: 30px 0;
+    }
+    .clase__main__htm__form{
+        display: grid;
+        grid-template-areas: 
+        "legend1 select1"
+        "legend2 select2"
+        "titulo1 titulo1"
+        "input1 input1"
+        "titulo2 titulo2"
+        "input2 input2"
+        "titulo3 titulo3"
+        "input3 input3"
+        "boton boton";
+        grid-template-rows: repeat(8, 1fr) 2fr;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.5rem;
+        row-gap: 0;
+        align-items:center; 
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        max-width: 700px;
+        margin: auto;
+        width: 90%;
+    }
 }
-.clase__main__htm__form{
-    display: grid;
-    grid-template-areas: 
-    "legend1 select1"
-    "legend2 select2"
-    "titulo1 titulo1"
-    "input1 input1"
-    "titulo2 titulo2"
-    "input2 input2"
-    "titulo3 titulo3"
-    "input3 input3"
-    "boton boton";
-    grid-template-rows: repeat(8, 1fr) 2fr;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1.5rem;
-    row-gap: 0;
-    align-items:center; 
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    max-width: 700px;
-    margin: auto;
-    width: 90%;
+@media (max-width:499px) {
+    .clase__main__htm h2{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        font-size: 28px;
+        font-weight: 500;
+        padding: 30px 0;
+    }
+    .clase__main__htm__form{
+        display: grid;
+        grid-template-areas: 
+        "legend1 select1"
+        "legend2 select2"
+        "titulo1 titulo1"
+        "input1 input1"
+        "titulo2 titulo2"
+        "input2 input2"
+        "titulo3 titulo3"
+        "input3 input3"
+        "boton boton";
+        grid-template-rows: repeat(8, 0.7fr) 1.5fr;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.5rem;
+        row-gap: 0;
+        align-items:center; 
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        max-width: 700px;
+        margin: auto;
+        width: 90%;
+    }
 }
 .clase__main__htm__form__legend__1{
     grid-area: legend1;
