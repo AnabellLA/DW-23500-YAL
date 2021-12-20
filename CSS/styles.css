@@ -489,6 +489,7 @@ body{
     font-weight: 400;
     width: 90%;
     margin: auto;
+    font-size: 18px;
 }
 .clase__main__ip__caja__forma{
     display: grid;
