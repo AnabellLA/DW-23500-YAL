@@ -1,0 +1,57 @@
+1) INDEX
+description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las categorías, imagenes, detalles y los precios de productos como bandanas, placas ID y correas para mascotas de diferentes especies y tamaños
+keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, PLACAS ID, BANDANAS, CORREAS
+title: Uvita Pets
+
+	1.1) BANDANAS
+	description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las bandanas para mascotas de diferentes especies
+	keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, BANDANAS, BANDANAS MASCOTAS, TAMAÑOS
+	title: Bandanas
+
+		1.1.1) INTERNA BANDANAS
+		description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las bandanas para mascotas de diferentes especies
+		keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, BANDANAS, BANDANAS MASCOTAS, TAMAÑOS
+		title: Bandana Nalita
+
+	1.2) CORREAS
+	description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las correas para mascotas de diferentes especies
+	keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, CORREAS, TAMAÑOS, COLLARES
+	title: Correas
+
+		1.2.1) INTERNA CORREAS
+		description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las correas para mascotas de diferentes especies
+		keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, CORREAS, TAMAÑOS, COLLARES
+		title: Correa Nalita
+
+	1.3) PLACAS ID	
+	description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las placas ID para mascotas de diferentes especies
+	keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, PLACAS, PLAQUITAS, PLACAS ID, IDENTIFICACION
+	title: Placas id
+
+		1.3.1) INTERNA PLACAS ID
+		description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar las imagenes, detalles y los precios de las placas ID para mascotas de diferentes especies
+		keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, PLACAS, PLAQUITAS, PLACAS ID, IDENTIFICACION
+		title: Placa Nalita
+
+
+	1.4) HAZLO TU MISMO
+	description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar el formulario para solicitar un producto para una mascotas específica
+	keywords: MASCOTAS, PERROS, GATOS, ACCESORIOS MASCOTAS, UVITA PETS, HAZLO TU MISMO, HAND MADE, PERSONALIZADO
+	title: Hazlo tu mismo
+
+	1.5) NOSOTROS
+	description: Sitio web del emprendimiento Uvita pets en el que se pueden encontrar la información de la misma y de la forma de trabajo
+	keywords: MASCOTAS, PERROS, GATOS, UVITA PETS, INFORMACIÓN, EMPRENDIMIENTO
+	title: Nosotros
+
+	1.6) PATATON
+	description: Sitio web del emprendimiento Uvita pets en el que se puede encontrar los detalles del apoyo a la pataton
+	keywords: MASCOTAS, PERROS, GATOS, UVITA PETS, PATATON, ADOPTATON, DONACIONES, APOYO
+	title: Pataton
+
+
+
+
+
+
+
