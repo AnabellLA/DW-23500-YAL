@@ -1,3 +1,23 @@
+.clase__main__ip, .clase__main__ip__titulo {
+  display: flex;
+  flex-wrap: wrap; }
+
+.clase__main__ip__caja__forma__select__1, .clase__main__ip__caja__forma__select__2, .clase__main__htm__form__select__1, .clase__main__htm__form__select__2 {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  max-width: 300px;
+  width: auto; }
+
+.clase__main__ip, .clase__main__ip__cierre h4, .clase__main__ip__tabla table {
+  width: 90%;
+  margin: auto; }
+
+.clase__main__htm__form__input__1, .clase__main__htm__form__input__2, .clase__main__htm__form__input__3 {
+  max-width: 700px;
+  border-radius: 8px 8px 8px 8px;
+  border-style: solid; }
+
 body {
   margin: 0;
   padding: 0; }
@@ -20,6 +40,7 @@ body {
     font-weight: 500;
     text-align: center; }
   .clase__main__index__htm a {
+    font: "M PLUS Rounded 1c", sans-serif;
     background-color: #ec7f39;
     text-align: center;
     color: white;
@@ -48,6 +69,7 @@ body {
     font-weight: 500;
     text-align: center; }
   .clase__main__index__htm a {
+    font: "M PLUS Rounded 1c", sans-serif;
     background-color: #ec7f39;
     text-align: center;
     color: white;
@@ -332,6 +354,7 @@ body {
         font-family: "M PLUS Rounded 1c", sans-serif;
         font-size: 16px;
         font-weight: 300;
+        font: "M PLUS Rounded 1c", sans-serif;
         background-color: #ec7f39;
         text-align: center;
         color: white;
@@ -388,284 +411,233 @@ body {
       background: grey;
       color: white; }
 
-.clase__main__ip__titulo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 220px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  margin-top: 15px;
-  margin-left: 4%;
-  margin-bottom: 20px; }
-
-.clase__main__ip__titulo a {
-  text-decoration: none;
-  color: black; }
-
-.clase__main__ip__titulo a:hover {
-  text-decoration: none;
-  color: black;
-  opacity: 0.7; }
-
-.clase__main__ip__titulo p {
-  margin: 0px;
-  text-decoration: none;
-  font-weight: bold; }
-
 .clase__main__ip {
-  display: flex;
-  flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
-  width: 90%;
-  margin: auto;
   padding-bottom: 30px; }
+  .clase__main__ip img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    border-radius: 10%; }
+  .clase__main__ip h3 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 10px 0; }
+  .clase__main__ip h2 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 10px 0; }
+  .clase__main__ip p {
+    margin: 0; }
+  .clase__main__ip form {
+    margin-bottom: 10px; }
+  .clase__main__ip__titulo {
+    justify-content: space-between;
+    max-width: 220px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    margin: 15px 0 20px 4%; }
+    .clase__main__ip__titulo a {
+      text-decoration: none;
+      color: black; }
+    .clase__main__ip__titulo a:hover {
+      text-decoration: none;
+      color: black;
+      opacity: 0.7; }
+    .clase__main__ip__titulo p {
+      margin: 0px;
+      text-decoration: none;
+      font-weight: bold; }
+  .clase__main__ip__caja {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-align: left; }
+    .clase__main__ip__caja__forma {
+      display: grid;
+      grid-template-areas: "legend1 select1" "legend2 select2" "boton boton";
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 1.5rem;
+      align-items: center; }
+      .clase__main__ip__caja__forma__boton {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        font: "M PLUS Rounded 1c", sans-serif;
+        background-color: #ec7f39;
+        text-align: center;
+        color: white;
+        width: 180px;
+        height: 40px;
+        grid-area: boton;
+        border: none;
+        border-radius: 8px 8px 8px 8px; }
+      .clase__main__ip__caja__forma__legend__1 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        grid-area: legend1; }
+      .clase__main__ip__caja__forma__legend__2 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        grid-area: legend2; }
+      .clase__main__ip__caja__forma__select__1 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        grid-area: select1; }
+      .clase__main__ip__caja__forma__select__2 {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        grid-area: select2; }
+  .clase__main__ip__cierre {
+    margin-bottom: 30px; }
+    .clase__main__ip__cierre h4 {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: left; }
+  .clase__main__ip__tabla table {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 700px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 40px; }
+  .clase__main__ip__tabla table tr {
+    border-bottom: gray 0.5px solid;
+    border-top: gray 0.5px solid; }
+  .clase__main__ip__tabla table th {
+    border-bottom: gray 2px solid;
+    border-top: gray 2px solid; }
 
-.clase__main__ip img {
-  height: auto;
-  max-width: 450px;
-  width: 100%;
-  border-radius: 10%; }
+@media (min-width: 500px) {
+  .clase__main__htm h2 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-weight: 500;
+    padding: 30px 0;
+    font-size: 35px; }
+  .clase__main__htm__form {
+    display: grid;
+    grid-template-areas: "legend1 select1" "legend2 select2" "titulo1 titulo1" "input1 input1" "titulo2 titulo2" "input2 input2" "titulo3 titulo3" "input3 input3" "boton boton";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
+    row-gap: 0;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    max-width: 700px;
+    margin: auto;
+    width: 90%;
+    grid-template-rows: repeat(8, 1fr) 2fr; } }
 
-.clase__main__ip__caja {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: left; }
-
-.clase__main__ip h3 {
-  font-size: 50px;
-  font-weight: 500;
-  margin: 10px 0; }
-
-.clase__main__ip h2 {
-  font-size: 35px;
-  font-weight: 400;
-  margin: 10px 0; }
-
-.clase__main__ip p {
-  margin: 0; }
-
-.clase__main__ip form {
-  margin-bottom: 10px; }
-
-.clase__main__ip__cierre {
-  margin-bottom: 30px; }
-
-.clase__main__ip__cierre h4 {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: left;
-  font-weight: 400;
-  width: 90%;
-  margin: auto;
-  font-size: 18px; }
-
-.clase__main__ip__caja__forma {
-  display: grid;
-  grid-template-areas: "legend1 select1" "legend2 select2" "boton boton";
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 1.5rem;
-  align-items: center; }
-
-.clase__main__ip__caja__forma__boton {
-  grid-area: boton;
-  border: none;
-  background-color: #ec7f39;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  font-weight: 500;
-  height: 40px;
-  width: 180px;
-  font-size: 22px;
-  color: white;
-  border-radius: 8px 8px 8px 8px; }
-
-.clase__main__ip__caja__forma__legend__1 {
-  grid-area: legend1;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
-
-.clase__main__ip__caja__forma__legend__2 {
-  grid-area: legend2;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
-
-.clase__main__ip__caja__forma__select__1 {
-  grid-area: select1;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  max-width: 300px;
-  width: auto;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
-
-.clase__main__ip__caja__forma__select__2 {
-  grid-area: select2;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  max-width: 300px;
-  width: auto;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
-
-.clase__main__ip__tabla table {
-  width: 90%;
-  max-width: 700px;
-  border-spacing: 0;
-  border-collapse: collapse;
-  font-size: 14px;
-  line-height: 1.4;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 40px; }
-
-.clase__main__ip__tabla table tr {
-  border-bottom: gray 0.5px solid;
-  border-top: gray 0.5px solid; }
-
-.clase__main__ip__tabla table th {
-  border-bottom: gray 2px solid;
-  border-top: gray 2px solid; }
+@media (max-width: 499px) {
+  .clase__main__htm h2 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-weight: 500;
+    padding: 30px 0;
+    font-size: 28px; }
+  .clase__main__htm__form {
+    display: grid;
+    grid-template-areas: "legend1 select1" "legend2 select2" "titulo1 titulo1" "input1 input1" "titulo2 titulo2" "input2 input2" "titulo3 titulo3" "input3 input3" "boton boton";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
+    row-gap: 0;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    max-width: 700px;
+    margin: auto;
+    width: 90%;
+    grid-template-rows: repeat(8, 0.7fr) 1.5fr; } }
 
 .clase__main__htm img {
-  border-radius: 50%;
   width: 200px;
   height: 200px;
+  border-radius: 50%;
   display: block;
   margin: auto;
   width: auto;
   margin-top: 40px; }
 
-@media (min-width: 500px) {
-  .clase__main__htm h2 {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    font-size: 35px;
-    font-weight: 500;
-    padding: 30px 0; }
-  .clase__main__htm__form {
-    display: grid;
-    grid-template-areas: "legend1 select1" "legend2 select2" "titulo1 titulo1" "input1 input1" "titulo2 titulo2" "input2 input2" "titulo3 titulo3" "input3 input3" "boton boton";
-    grid-template-rows: repeat(8, 1fr) 2fr;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1.5rem;
-    row-gap: 0;
-    align-items: center;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    max-width: 700px;
-    margin: auto;
-    width: 90%; } }
-
-@media (max-width: 499px) {
-  .clase__main__htm h2 {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    font-size: 28px;
-    font-weight: 500;
-    padding: 30px 0; }
-  .clase__main__htm__form {
-    display: grid;
-    grid-template-areas: "legend1 select1" "legend2 select2" "titulo1 titulo1" "input1 input1" "titulo2 titulo2" "input2 input2" "titulo3 titulo3" "input3 input3" "boton boton";
-    grid-template-rows: repeat(8, 0.7fr) 1.5fr;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1.5rem;
-    row-gap: 0;
-    align-items: center;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    max-width: 700px;
-    margin: auto;
-    width: 90%; } }
-
 .clase__main__htm__form__legend__1 {
   grid-area: legend1;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
   font-weight: 500; }
 
 .clase__main__htm__form__legend__2 {
   grid-area: legend2;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
   font-weight: 500; }
 
 .clase__main__htm__form__select__1 {
   grid-area: select1;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  max-width: 400px;
-  width: auto;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
-  font-weight: 500;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
+  font-weight: 500; }
 
 .clase__main__htm__form__select__2 {
   grid-area: select2;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  max-width: 400px;
-  width: auto;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
-  font-weight: 500;
-  font-family: 'M PLUS Rounded 1c', sans-serif; }
+  font-weight: 500; }
 
 .clase__main__htm__form__h4__1 {
   grid-area: titulo1;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
   font-weight: 500; }
 
 .clase__main__htm__form__h4__2 {
   grid-area: titulo2;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
   font-weight: 500; }
 
 .clase__main__htm__form__h4__3 {
   grid-area: titulo3;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 18px;
   font-weight: 500; }
 
 .clase__main__htm__form__input__1 {
   grid-area: input1;
-  max-width: 700px;
   width: auto;
-  height: 30px;
-  border-radius: 8px 8px 8px 8px;
-  border-style: solid; }
+  height: 30px; }
 
 .clase__main__htm__form__input__2 {
   grid-area: input2;
-  max-width: 700px;
   width: auto;
-  height: 30px;
-  border-radius: 8px 8px 8px 8px;
-  border-style: solid; }
+  height: 30px; }
 
 .clase__main__htm__form__input__3 {
   grid-area: input3;
-  max-width: 700px;
   width: auto;
-  height: 30px;
-  border-radius: 8px 8px 8px 8px;
-  border-style: solid; }
+  height: 30px; }
 
 .clase__main__htm__form__boton {
   grid-area: boton;
-  border: none;
+  font: "M PLUS Rounded 1c", sans-serif;
   background-color: #ec7f39;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 500;
-  height: 40px;
-  width: 180px;
-  font-size: 22px;
+  text-align: center;
   color: white;
+  width: 180px;
+  height: 40px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
   border-radius: 8px 8px 8px 8px;
   margin: auto; }

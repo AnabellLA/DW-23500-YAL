@@ -1,6 +1,4 @@
-//AQUÍ EMPIEZA LA ADAPTACIÓN A SCSS
-//---------------------------------------------------------------
-// estilos generales
+// ESTILOS
 $font-family:'M PLUS Rounded 1c', sans-serif;
 @mixin estilos_txt_1($size: 20px) {
     font-family: $font-family;
@@ -45,6 +43,10 @@ $font-family:'M PLUS Rounded 1c', sans-serif;
     width: $width;
     height: $height;
 }
+@mixin bordes_tabla ($tamano) {
+    border-bottom: gray $tamano solid;
+    border-top: gray $tamano solid;
+}
 @mixin imagenes_nosotros {
     display:block;
     margin:auto;
@@ -59,9 +61,66 @@ $font-family:'M PLUS Rounded 1c', sans-serif;
     transform: scale(1.05);
 }
 @mixin boton {
+    font: $font-family;
     background-color: rgba(236, 127, 57, 1);
     text-align: center;
     color: white;
+}
+@mixin media_form_htm($v1, $v2){
+    display: grid;
+    grid-template-areas: 
+    "legend1 select1"
+    "legend2 select2"
+    "titulo1 titulo1"
+    "input1 input1"
+    "titulo2 titulo2"
+    "input2 input2"
+    "titulo3 titulo3"
+    "input3 input3"
+    "boton boton";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
+    row-gap: 0;
+    align-items:center; 
+    font-family: $font-family;
+    max-width: 700px;
+    margin: auto;
+    width: 90%;
+    grid-template-rows: repeat(8, $v1) $v2;
+}
+@mixin media_h2_htm($font_size){
+    font-family: $font-family;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-weight: 500;
+    padding: 30px 0;
+    font-size: $font_size;
+}
+$estilos:(
+    texto:white,
+    sin_decoracion: none,
+    centro:center
+);
+%flex_producto{
+    display: flex;
+    flex-wrap: wrap;
+}
+%borde_opc{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    max-width: 300px;
+    width: auto;
+}
+%width_margin{
+    width: 90%;
+    margin: auto;
+}
+%borde_htm{
+    max-width: 700px;
+    border-radius: 8px 8px 8px 8px;
+    border-style: solid;
 }
 //BODY
 body{
@@ -75,19 +134,19 @@ body{
     }
     .clase__main__index__caja__a{
         @include font_size (20px, 500);
-        color:white;
-        text-decoration: none;
-        text-align:center;
+        color:map-get($estilos, texto);
+        text-decoration:map-get($estilos, sin_decoracion);
+        text-align:map-get($estilos, centro);
         background: rgba(216, 35, 97, 0.64);
     }
     .clase__main__index__htm p{
         @include font_size (23px, 500);
-        text-align:center;
+        text-align:map-get($estilos, centro);
     }
     .clase__main__index__htm a{
         @include boton;
         @include font_size (25px, bold);
-        text-decoration: none;
+        text-decoration:map-get($estilos, sin_decoracion);
         border-radius: 50px;
         padding: 5px 40px;
     }
@@ -98,19 +157,19 @@ body{
     }
     .clase__main__index__caja__a{
         @include font_size (14px, 500);
-        color:white;
-        text-decoration: none;
-        text-align:center;
+        color:map-get($estilos, texto);
+        text-decoration:map-get($estilos, sin_decoracion);
+        text-align:map-get($estilos, centro);
         background: rgba(216, 35, 97, 0.64);
     }
     .clase__main__index__htm p{
         @include font_size (18px, 500);
-        text-align:center;
+        text-align:map-get($estilos, centro);
     }
     .clase__main__index__htm a{
         @include boton;
         @include font_size (20px, bold);
-        text-decoration: none;
+        text-decoration:map-get($estilos, sin_decoracion);
         border-radius: 50px;
         padding: 5px 40px;
     }
@@ -147,15 +206,15 @@ body{
             opacity: 0.75;
         }
         &__a:hover{
-            text-decoration: none;
-            color: white;
+            text-decoration:map-get($estilos, sin_decoracion);
+            color:map-get($estilos, texto);
         }
     }
     &__htm{
         grid-area: htm;
         max-width: 100%;
         margin: auto;
-        text-align: center;
+        text-align:map-get($estilos, centro);
         height: 150px;
         a:hover{
             @extend .clase__main__index__caja__a:hover;
@@ -343,7 +402,7 @@ body{
                 margin: auto;
                 p{
                     margin: 0;
-                    text-align: center;
+                    text-align:map-get($estilos, centro);
                 }
                 img{
                     @include width_height(120px, 120px);
@@ -380,318 +439,211 @@ body{
         }
         &__boton:hover{
             background: grey;
-            color: white;
+            color:map-get($estilos, texto);
         }
     }
 }
-//AQUÍ TERMINA LA ADAPTACIÓN A SCSS
-//---------------------------------------------------------------
-//INTERNA PRODUCTO - FALTA ADAPTAR
-.clase__main__ip__titulo{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 220px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    margin-top: 15px;
-    margin-left: 4%;
-    margin-bottom: 20px;
-}
-.clase__main__ip__titulo a{
-    text-decoration: none;
-    color:black;
-}
-.clase__main__ip__titulo a:hover{
-    text-decoration: none;
-    color:black;
-    opacity: 0.7;
-}
-.clase__main__ip__titulo p{
-    margin: 0px;
-    text-decoration: none;
-    font-weight: bold;
-}
+//INTERNA PRODUCTO
 .clase__main__ip{
-    display: flex;
-    flex-wrap: wrap;
+    @extend %flex_producto;
+    @extend %width_margin;
     align-content: center;
     justify-content: space-evenly;
-    width: 90%;
-    margin: auto;
     padding-bottom: 30px;
+    img{
+        @include width_height(100%, auto);
+        max-width: 450px;
+        border-radius: 10%;
+    }
+    h3{
+        @include font_size (50px, 500);
+        margin: 10px 0;
+    }
+    h2{
+        @include font_size (35px, 400);
+        margin: 10px 0;
+    }
+    p{
+        margin: 0;
+    }
+    form{
+        margin-bottom: 10px;
+    }
+    &__titulo{
+        @extend %flex_producto;
+        justify-content: space-between;
+        max-width: 220px;
+        font-family: $font-family;
+        margin: 15px 0 20px 4%;
+        a{
+            @include estilos_txt_a_productos;
+        }
+        a:hover{
+            @include estilos_txt_a_productos;
+            opacity: 0.7;
+        }
+        p{
+            margin: 0px;
+            text-decoration:map-get($estilos, sin_decoracion);
+            font-weight: bold;
+        }
+    }
+    &__caja{
+        font-family: $font-family;
+        text-align: left;
+        &__forma{
+            display: grid;
+            grid-template-areas: 
+            "legend1 select1"
+            "legend2 select2"
+            "boton boton";
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 1.5rem;
+            align-items:center;
+            &__boton{
+                @include font_size (22px, 500);
+                @include boton;
+                @include width_height(180px, 40px);
+                grid-area: boton;
+                border: none;
+                border-radius: 8px 8px 8px 8px;
+            }
+            &__legend__1{
+                @include font_size (18px, 400);
+                grid-area: legend1;
+            }
+            &__legend__2{
+                @include font_size (18px, 400);
+                grid-area: legend2;
+            }
+            &__select__1{
+                @include font_size (18px, 400);
+                grid-area: select1;
+                @extend %borde_opc;
+            }
+            &__select__2{
+                @include font_size (18px, 400);
+                grid-area: select2;
+                @extend %borde_opc;
+            }
+        }
+    }
+    &__cierre{
+        margin-bottom: 30px;
+        h4{
+            @include font_size (18px, 400);
+            @extend %width_margin;
+            text-align: left;
+        }
+    }
+    &__tabla{
+        table{
+            @include font_size (14px, 400);
+            @extend %width_margin;
+            max-width: 700px;
+            border-spacing: 0;
+            border-collapse: collapse;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        table tr{
+            @include bordes_tabla (0.5px);
+        }
+        table th{
+            @include bordes_tabla (2px);
+        }
+    }
 }
-.clase__main__ip img{
-    height: auto;
-    max-width: 450px;
-    width: 100%;
-    border-radius: 10%;
-}
-.clase__main__ip__caja{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: left;
-}
-.clase__main__ip h3{
-    font-size: 50px;
-    font-weight: 500;
-    margin: 10px 0;
-}
-.clase__main__ip h2{
-    font-size: 35px;
-    font-weight: 400;
-    margin: 10px 0;
-}
-.clase__main__ip p{
-    margin: 0;
-}
-.clase__main__ip form{
-    margin-bottom: 10px;
-}
-.clase__main__ip__cierre{
-    margin-bottom: 30px;
-}
-.clase__main__ip__cierre h4{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: left;
-    font-weight: 400;
-    width: 90%;
-    margin: auto;
-    font-size: 18px;
-}
-.clase__main__ip__caja__forma{
-    display: grid;
-    grid-template-areas: 
-    "legend1 select1"
-    "legend2 select2"
-    "boton boton";
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 1.5rem;
-    align-items:center;
-}
-.clase__main__ip__caja__forma__boton{
-    grid-area: boton;
-    border: none;
-    background-color: rgba(236, 127, 57, 1);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    font-weight: 500;
-    height: 40px;
-    width: 180px;
-    font-size: 22px;
-    color: white;
-    border-radius: 8px 8px 8px 8px;
-}
-.clase__main__ip__caja__forma__legend__1{
-    grid-area: legend1;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__ip__caja__forma__legend__2{
-    grid-area: legend2;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__ip__caja__forma__select__1{
-    grid-area: select1;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    max-width: 300px;
-    width: auto;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__ip__caja__forma__select__2{
-    grid-area: select2;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    max-width: 300px;
-    width: auto;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__ip__tabla table{
-    width: 90%;
-    max-width: 700px;
-    border-spacing: 0;
-    border-collapse: collapse;
-    font-size: 14px;
-    line-height: 1.4;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 40px;
-}
-.clase__main__ip__tabla table tr{
-    border-bottom: gray 0.5px solid;
-    border-top: gray 0.5px solid;
-}
-.clase__main__ip__tabla table th{
-    border-bottom: gray 2px solid;
-    border-top: gray 2px solid;
-}
-//HAZLO TU MISMO - FALTA ADAPTAR
-.clase__main__htm img{
-    border-radius: 50%;
-    width:200px;
-    height:200px;
-    display:block;
-    margin:auto;
-    width: auto;
-    margin-top: 40px;
-}
+//HAZLO TU MISMO
 @media (min-width:500px){
     .clase__main__htm h2{
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        font-size: 35px;
-        font-weight: 500;
-        padding: 30px 0;
+        @include media_h2_htm(35px);
     }
     .clase__main__htm__form{
-        display: grid;
-        grid-template-areas: 
-        "legend1 select1"
-        "legend2 select2"
-        "titulo1 titulo1"
-        "input1 input1"
-        "titulo2 titulo2"
-        "input2 input2"
-        "titulo3 titulo3"
-        "input3 input3"
-        "boton boton";
-        grid-template-rows: repeat(8, 1fr) 2fr;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 1.5rem;
-        row-gap: 0;
-        align-items:center; 
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        max-width: 700px;
-        margin: auto;
-        width: 90%;
+        @include media_form_htm(1fr, 2fr);
     }
 }
 @media (max-width:499px) {
     .clase__main__htm h2{
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        font-size: 28px;
-        font-weight: 500;
-        padding: 30px 0;
+        @include media_h2_htm(28px);
     }
     .clase__main__htm__form{
-        display: grid;
-        grid-template-areas: 
-        "legend1 select1"
-        "legend2 select2"
-        "titulo1 titulo1"
-        "input1 input1"
-        "titulo2 titulo2"
-        "input2 input2"
-        "titulo3 titulo3"
-        "input3 input3"
-        "boton boton";
-        grid-template-rows: repeat(8, 0.7fr) 1.5fr;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 1.5rem;
-        row-gap: 0;
-        align-items:center; 
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        max-width: 700px;
-        margin: auto;
-        width: 90%;
+        @include media_form_htm(0.7fr, 1.5fr);
     }
 }
-.clase__main__htm__form__legend__1{
-    grid-area: legend1;
-    font-size: 18px;
-    font-weight: 500;
-}
-.clase__main__htm__form__legend__2{
-    grid-area: legend2;
-    font-size: 18px;
-    font-weight: 500;
-}
-.clase__main__htm__form__select__1{
-    grid-area: select1;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    max-width: 400px;
-    width: auto;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__htm__form__select__2{
-    grid-area: select2;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    max-width: 400px;
-    width: auto;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.clase__main__htm__form__h4__1{
-    grid-area: titulo1;
-    font-size: 18px;
-    font-weight: 500;
-}
-.clase__main__htm__form__h4__2{
-    grid-area: titulo2;
-    font-size: 18px;
-    font-weight: 500;
-}
-.clase__main__htm__form__h4__3{
-    grid-area: titulo3;
-    font-size: 18px;
-    font-weight: 500;
-}
-.clase__main__htm__form__input__1{
-    grid-area: input1;
-    max-width: 700px;
-    width: auto;
-    height: 30px;
-    border-radius: 8px 8px 8px 8px;
-    border-style: solid;
-}
-.clase__main__htm__form__input__2{
-    grid-area: input2;
-    max-width: 700px;
-    width: auto;
-    height: 30px;
-    border-radius: 8px 8px 8px 8px;
-    border-style: solid;
-}
-.clase__main__htm__form__input__3{
-    grid-area: input3;
-    max-width: 700px;
-    width: auto;
-    height: 30px;
-    border-radius: 8px 8px 8px 8px;
-    border-style:solid;
-}
-.clase__main__htm__form__boton{
-    grid-area: boton;
-    border: none;
-    background-color: rgba(236, 127, 57, 1);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-weight: 500;
-    height: 40px;
-    width: 180px;
-    font-size: 22px;
-    color: white;
-    border-radius: 8px 8px 8px 8px;
-    margin: auto;
+.clase__main__htm{
+    img{
+        @include  width_height(200px, 200px);
+        border-radius: 50%;
+        display:block;
+        margin:auto;
+        width: auto;
+        margin-top: 40px;
+    }
+    &__form{
+        &__legend{
+            &__1{
+                grid-area: legend1;
+                @include font_size (18px, 500);
+            }
+            &__2{
+                grid-area: legend2;
+                @include font_size (18px, 500);
+            }
+        }
+        &__select{
+            &__1{
+                grid-area: select1;
+                @include font_size (18px, 500);
+                @extend %borde_opc;
+            }
+            &__2{
+                grid-area: select2;
+                @include font_size (18px, 500);
+                @extend %borde_opc;
+            }
+        }
+        &__h4{
+            &__1{
+                grid-area: titulo1;
+                @include font_size (18px, 500);
+            }
+            &__2{
+                grid-area: titulo2;
+                @include font_size (18px, 500);
+            }
+            &__3{
+                grid-area: titulo3;
+                @include font_size (18px, 500);
+            }
+        }
+        &__input{
+            &__1{
+                grid-area: input1;
+                @include  width_height(auto, 30px);
+                @extend %borde_htm;
+            }
+            &__2{
+                grid-area: input2;
+                @include  width_height(auto, 30px);
+                @extend %borde_htm;
+            }
+            &__3{
+                grid-area: input3;
+                @include  width_height(auto, 30px);
+                @extend %borde_htm;
+            }
+        }
+        &__boton{
+            grid-area: boton;
+            @include boton;
+            @include  width_height(180px, 40px);
+            @include font_size (22px, 500);
+            border: none;
+            border-radius: 8px 8px 8px 8px;
+            margin: auto;
+        }
+    }
 }
